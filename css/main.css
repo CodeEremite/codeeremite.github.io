@@ -1,17 +1,38 @@
-body {
-    padding:0;
+* {
     margin:0;
-    font-family:Geneva;
+    padding:0;
+}
+body {
+    font-size:100%;
+}
+a {
+    text-decoration:none;
+}
+header {
+    background-color:#555;
+    padding:0.5em 0;
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
-.navbar {
+nav>a {
+    font-size:2em;
+}
+
+nav li {
+    display:inline;
+}
+nav div {
+    padding-top:1em;
+    float:right;
+}
+head {
+    display:none;
+}
+main {
+    margin:0 auto;
+    width:80%;
+    padding-top:4em;
     background-color:#bbb;
-}
-
-.navbar .div {
-    display:inline;
-}
-
-.navbar li {
-    display:inline;
 }
