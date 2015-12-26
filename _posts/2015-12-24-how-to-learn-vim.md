@@ -1,6 +1,6 @@
 ---
 title: 学习vim有感
-date: 2014-12-24 21:05:13 +0800
+date: 2015-12-24 21:05:13 +0800
 layout: default
 categories:
   - vim
