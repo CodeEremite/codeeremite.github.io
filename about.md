@@ -11,5 +11,5 @@ title: "关于:About"
 
 ## 联系方式
 
-<p>&#9993;{{ site.email }} </p>
+<p>&#9993; {{ site.email }} </p>
 
