@@ -11,5 +11,5 @@ title: "关于:About"
 
 ## 联系方式
 
-<p>邮箱: codefighter@foxmail.com </p>
+<p>&#9993;{{ site.email }} </p>
 
