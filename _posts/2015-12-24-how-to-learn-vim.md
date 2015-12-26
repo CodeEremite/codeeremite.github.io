@@ -1,3 +1,13 @@
+---
+title: 怎么能学好vim?
+date: 2014-12-24 21:05:13 +0800
+layout: default
+categories:
+  - vim
+tags:
+  - vim
+---
+
 # 学习vim有感
 ## 1. vim只是一个工具
 - 学好vim能提高写代码或者写文章的速度，但是**不会提高代码或文章本身的质量**
