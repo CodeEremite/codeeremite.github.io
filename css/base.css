@@ -2,6 +2,7 @@ body {
     padding:0;
     margin:0;
     font-size:100%;
+    padding-top:3em;
 }
 
 nav .container, .page {
