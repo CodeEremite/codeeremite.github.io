@@ -14,11 +14,11 @@ nav {
     background-color:#111;
     height:3em;
 
-	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-	-o-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-	box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-	border-radius: 0;
+	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+	-o-box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+	box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+	/*border-radius: 0;*/
 
     position:fixed;
     top:0;
