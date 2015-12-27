@@ -4,17 +4,31 @@ body {
     font-size:100%;
 }
 
-.page {
+nav .container, .page {
     max-width:60em;
     margin:0 auto;
 }
 
+nav {
+    background-color:#111;
+    height:3em;
+
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	-o-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+	border-radius: 0;
+}
+
 nav ul {
+    margin:0;
+    padding:0;
     list-style:none;
 }
 
 nav li {
     text-align:center;
+    display:inline;
 }
 
 a {
