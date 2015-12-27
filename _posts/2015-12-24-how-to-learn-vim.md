@@ -26,10 +26,11 @@ vim的一大优点是其可配置性，加上各种各样的插件，其功能�
 **只有具备扎实的基础知识，才能更好的驾驭各种插件，才能在插件之间以及插件与配置之间出现冲突时解决他们，才能真正的让vim的行为如你所愿。**
 
 这里**推荐四个学习材料**：
-1. vim自带: vimtutor
-2. [《VIM User Manual》](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)
-3. [《Vim实用技巧》](http://item.jd.com/11445638.html)即大名鼎鼎的Practical Vim
-4. [《Learn Vimscript the Hard Way》](http://learnvimscriptthehardway.stevelosh.com/)
+
+1. vim自带: vimtutor  
+2. [《VIM User Manual》](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)  
+3. [《Vim实用技巧》](http://item.jd.com/11445638.html)即大名鼎鼎的Practical Vim  
+4. [《Learn Vimscript the Hard Way》](http://learnvimscriptthehardway.stevelosh.com/)  
 
 *材料1、2、3比较基础，材料2比较长，但应该通读一遍，都记住不现实，实际上平常也不可能用到所有的命令，但是对一些概念应该有正确的认识，碰到问题的时候知道在哪儿找就可以了，材料3讲了一些操作思维，绝对值得买一本，经常看看*
 *材料4相对高级一点，如果你打算自己写插件，你绝对不应该错过。即使不写插件，前1/3部分也值得一看，看完你就能看懂大部分vimrc里的设置，并能自己根据需要定制你的vim了。*
