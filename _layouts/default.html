@@ -10,21 +10,23 @@
     <!--<link rel="stylesheet" href="css/navbar.css" />-->
 </head>
 <body>
-<header>
+<nav>
     <div class="container">
         {% include navigation.html %}
     </div>
-</header>
-<main>
-    <div class="container"> 
-    {{ content }}
-    </div>
-</main>
-<footer>
-    <div class="container">
-        <hr>
-        <p>&copy2015 {{ site.author }} &#8984; Powered by jekyll.</p>
-    </div>
-</footer>
+</nav>
+<div class="page">
+    <main>
+        <div class="container"> 
+        {{ content }}
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <hr>
+            <p>&copy2015 {{ site.author }} &#8984; Powered by jekyll.</p>
+        </div>
+    </footer>
+</div>
 </body> 
 </html>

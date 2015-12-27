@@ -4,6 +4,23 @@ body {
     font-size:100%;
 }
 
-footer .container{
+.page {
+    max-width:60em;
+    margin:0 auto;
+}
+
+nav ul {
+    list-style:none;
+}
+
+nav li {
+    text-align:center;
+}
+
+a {
+    text-decoration:none;
+}
+
+footer {
     text-align:center;
 }
