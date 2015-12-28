@@ -17,7 +17,9 @@ a {
 
 nav .container, .page {
     max-width:60em;
+    min-width:30em;
     margin:0 auto;
+    padding: 0em 1em;
 }
 
 nav {
