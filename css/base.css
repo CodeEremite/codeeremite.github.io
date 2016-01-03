@@ -35,6 +35,15 @@ nav {
     z-index:1000;
 }
 
+.navbar-collapse {
+    float:right;
+}
+
+nav .navbar-header {
+    float:left;
+    padding:1em 0em;
+}
+
 nav ul {
     margin:0;
     padding:0;
@@ -42,7 +51,7 @@ nav ul {
 }
 
 nav li {
-    text-align:left;
+    text-align:right;
     display:block;
     float:left;
     padding:1em 0em;
