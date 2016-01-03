@@ -18,10 +18,10 @@ title: "首页:Home"
     {% endfor %}
     {% if paginator.total_pages > 1 %}
         {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//','/' }}">Newer</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//','/' }}">&larr; Newer</a>
         {% endif %}
         {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//','/' }}">Older</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//','/' }}">Older &rarr;</a>
         {% endif %}
     {% endif %}
 </div>
