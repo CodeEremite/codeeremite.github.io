@@ -1,6 +1,6 @@
 ---
 title: Apache2.4.7(Ubuntu)配置
-date: 2016-2-14 20:05:13 +0800
+date: 2016-02-14 20:05:13 +0800
 layout: default
 categories: Apache2 
 tags: Apache2 
