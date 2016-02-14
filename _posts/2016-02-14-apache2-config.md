@@ -26,14 +26,14 @@ tags:        [Apache2, Ubuntu]
 
 /etc/apache2文件夹下一些文件的用途:
 
-        /etc/apache2/envvars                     环境变量,通过apache2ctl启动服务器时会读取该文件，默认配置文件中使用其中定义的环境变量
-        /etc/apache2/ports.conf                  设置服务器监听端口
-        /etc/apache2/conf-enabled/charset.conf 　网站字符编码配置
-        /etc/apache2/conf-enabled/               一般性配置文件
-        /etc/apache2/mods-available/             已安装的模块
-        /etc/apache2/mods-enabled/               已启用的模块
-        /etc/apache2/sites-available/            可用站点信息
-        /etc/apache2/sites-enabled/              已启用的站点信息
+    /etc/apache2/envvars                     环境变量,通过apache2ctl启动服务器时会读取该文件，默认配置文件中使用其中定义的环境变量
+    /etc/apache2/ports.conf                  设置服务器监听端口
+    /etc/apache2/conf-enabled/charset.conf 　网站字符编码配置
+    /etc/apache2/conf-enabled/               一般性配置文件
+    /etc/apache2/mods-available/             已安装的模块
+    /etc/apache2/mods-enabled/               已启用的模块
+    /etc/apache2/sites-available/            可用站点信息
+    /etc/apache2/sites-enabled/              已启用的站点信息
 
 Apache2根据功能将配置划分到多个文件中，这样做的好处是配置管理起来比较方便。
 
