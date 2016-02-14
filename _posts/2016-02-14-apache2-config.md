@@ -58,7 +58,7 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
         status      显示服务器摘要的状态信息
         stop        停止服务器
 
-## 常用的配置命令
+## 常见的配置命令
 1. IncludeOptional 与 Include 功能一样，在配置文件中导入其他配置文件,不同之处在于，使用IncludeOptional，当通配符没有任何匹配的文件和文件夹时，IncludeOptional指令会忽略而不是引发一个错误. 
 2. ServerRoot 用来设置服务器所在目录，一般包含conf/、logs/等子目录。其他配置文件的相对路径基于此目录 
 3. ServerAdmin 设置服务器返回客启端的错误信息中包含的管理员邮件地址，便于用户在收到错误信息后能及时与管理员取得联系
@@ -78,5 +78,5 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
 14. LogLevel 控制日志文件中信息的严格程度，也可以单独为某一个模块设置此项
     
 15. <Directory> 控制服务器的默认安全模型,默认服务器对除/usr/share 和 /var/www 外的文件没有访问权限,其中/usr/share用于Web应用程序,/var/www用作Web服务器的本地文件夹,如果需要允许访问其他文件，需要在此处定义访问权限，或者在相关的虚拟主机设置中添加访问权限 
-Options Indexes 如果文件根目录中没有index.html,浏览器会显示文件根目录的目录列表，如果虚拟目录下没有index.html,浏览器也会显示虚拟目录的目录结构，要禁止显示目录结构列表，只需将Option中的Indexes去掉即可,或在Indexes前加上符号"-"
+16. Options Indexes 如果文件根目录中没有index.html,浏览器会显示文件根目录的目录列表，如果虚拟目录下没有index.html,浏览器也会显示虚拟目录的目录结构，要禁止显示目录结构列表，只需将Option中的Indexes去掉即可,或在Indexes前加上符号"-"
 
