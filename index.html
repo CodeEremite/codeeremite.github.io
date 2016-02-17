@@ -5,7 +5,7 @@ title: 求知尝味
 <div >
     {% for post in paginator.posts %}
     <div class="article-item">
-        <a href="{{ post.url }}"><section>{{ post.title }}</section></a>
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
         <p class="text-muted">{{ post.description }}</p>        
         <!--<p class="text-muted">{% if post.excerpt.size > 32 %}-->
             <!--{{ post.excerpt }}-->
