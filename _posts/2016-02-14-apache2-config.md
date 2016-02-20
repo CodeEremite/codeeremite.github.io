@@ -58,7 +58,7 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
         status      显示服务器摘要的状态信息
         stop        停止服务器
 
-## 常见的配置命令
+## apache2.conf中缺省的配置命令
 1. IncludeOptional 与 Include 功能一样，在配置文件中导入其他配置文件,不同之处在于，使用IncludeOptional，当通配符没有任何匹配的文件和文件夹时，IncludeOptional指令会忽略而不是引发一个错误. 
 2. ServerRoot 用来设置服务器所在目录，一般包含conf/、logs/等子目录。其他配置文件的相对路径基于此目录 
 3. ServerAdmin 设置服务器返回客启端的错误信息中包含的管理员邮件地址，便于用户在收到错误信息后能及时与管理员取得联系
