@@ -11,25 +11,34 @@ tags:        [工具, vim]
 
 下面列出了我在学习Vim的过程中收集的一些有用的资源。
 
-## 资源:教程篇
+## 1.教程
 1. vim自带: vimtutor  
-2. [《VIM User Manual》](http://www.eandem.co.uk/mrw/vim/usr_doc/index.html)  
-3. [《Vim实用技巧》](http://item.jd.com/11445638.html)即大名鼎鼎的Practical Vim  
-4. [《Learn Vimscript the Hard Way》](http://learnvimscriptthehardway.stevelosh.com/)  
+2. [《VIM User Manual》][1]
+3. [《Vim实用技巧》][2] 即大名鼎鼎的Practical Vim  
+4. [《Learn Vimscript the Hard Way》][3]  
+
+[1]: http://www.eandem.co.uk/mrw/vim/usr_doc/index.html
+[2]: http://item.jd.com/11445638.html
+[3]: http://learnvimscriptthehardway.stevelosh.com/
 
 <p>Tips:</p> 
 *1) 材料1、2、3比较基础，材料2比较长，但应该通读一遍，都记住不现实，实际上平常也不可能用到所有的命令，但是对一些概念应该有正确的认识，碰到问题的时候知道在哪儿找就可以了，材料3讲了一些操作思维，绝对值得买一本，经常看看* 
 
 *2) 材料4相对高级一点，如果你打算自己写插件，你绝对不应该错过。即使不写插件，前1/3部分也值得一看，看完你就能看懂大部分vimrc里的设置，并能自己根据需要定制你的vim了。* 
 
-## 资源:几篇博文
-1. [使用 pathogen + git 管理 Vim 插件](http://lostjs.com/2012/02/04/use-pathogen-and-git-to-manage-vimfiles/) (我的插件管理方式参考的这篇文章)
-2. [打造属于自己的Vim神器](http://zilongshanren.com/blog/2014-06-19-make-your-vim-weapon.html) & [打造属于自己的Vim神器:后记](http://zilongshanren.com/blog/2014-06-07-make-your-own-vim-supert-weapon.html)(文中有许多好的建议和资源、文章）
-3. [vim常用插件](http://www.wklken.me/category/vim.html)（这位博主把许多插件的使用方法都收集了，可以当帮助文档看了，感谢！）
+## 2.几篇博文
+1. [使用 pathogen + git 管理 Vim 插件][4] (我的插件管理方式参考的这篇文章)
+2. [打造属于自己的Vim神器][5] & [打造属于自己的Vim神器:后记][6] (文中有许多好的建议和资源、文章）
+3. [vim常用插件][7]（这位博主把许多插件的使用方法都收集了，可以当帮助文档看了，感谢！）
 
-### 最后叨叨自己的一点感想
+[4]: http://lostjs.com/2012/02/04/use-pathogen-and-git-to-manage-vimfiles/
+[5]: http://zilongshanren.com/blog/2014-06-19-make-your-vim-weapon.html
+[6]: http://zilongshanren.com/blog/2014-06-07-make-your-own-vim-supert-weapon.html
+[7]: http://www.wklken.me/category/vim.html
 
-#### 1. vim只是一个工具 
+## 叨叨自己的一点感想
+
+### 1) vim只是一个工具 
 
 - 学好vim能提高写代码或者写文章的速度，但是**不会提高代码或文章本身的质量** 
 
@@ -37,7 +46,7 @@ tags:        [工具, vim]
 
 - 根据自己的需求去学Vim，别想着一定要学完所有的功能技巧，人生苦短,别跟一个工具较劲。 
 
-#### 2. vim学习要循序渐近
+### 2) vim学习要循序渐近
 
 - vim的一大优点是其可配置性，加上各种各样的插件，其功能几乎可以无限扩展，这也是vim能流行至今一个很重要的原因。 网上介绍各种插件，用github分享自己vim配置的高手很多，一般还会附上各种令人眼花缭乱的配置截图，作为vim新手，我们不应该沉迷于这些浮华表象，踏踏实实打好基础才是第一步应该干的事情。
 
@@ -45,7 +54,7 @@ tags:        [工具, vim]
 
 - **学习时，一定要一边学一边练！！！** 学习vim和学习所有的工具一样，只有多用才可能用好。**vim越用越好用**
 
-### 3. 打造属于自己的vim
+### 3) 打造属于自己的vim
 
 - 即使不使用任何第三方插件，学完推荐的4个教程，你已经能使用vim高效完成很多工作了，更何况你还可以自己写插件，但是重复发明轮子毕竟不是明智之举，网上已有很多高手写的好用的插件，是时候让他们登场了。这时候可以多看看别人的博客，集万家所长了。
 

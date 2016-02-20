@@ -1,13 +1,13 @@
 ---
 layout:      default
-title:       Apache2.4.7(Ubuntu)配置
+title:       Apache2.4.7(Ubuntu)配置解析
 keywords:    Apache2
 description: Apache是当今最流行的服务器软件之一，可以运行在广泛的计算机平台上，本文是我在学习Apache配置的过程中作的一些笔记，以备后查。
 categories:  [Apache2] 
 tags:        [Apache2, Ubuntu] 
 ---
 
-# Apache2.4.7(Ubuntu)配置
+# Apache2.4.7(Ubuntu)配置解析
 
 **注: 不同系统不同版本的apache配置文件管理方式有些许差别(差别主要在于配置文件具体结构，配置命令则是相同的），本文所述基于Apache 2.4.7(Ubuntu)**
 
@@ -79,4 +79,7 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
     
 15. <Directory> 控制服务器的默认安全模型,默认服务器对除/usr/share 和 /var/www 外的文件没有访问权限,其中/usr/share用于Web应用程序,/var/www用作Web服务器的本地文件夹,如果需要允许访问其他文件，需要在此处定义访问权限，或者在相关的虚拟主机设置中添加访问权限 
 16. Options Indexes 如果文件根目录中没有index.html,浏览器会显示文件根目录的目录列表，如果虚拟目录下没有index.html,浏览器也会显示虚拟目录的目录结构，要禁止显示目录结构列表，只需将Option中的Indexes去掉即可,或在Indexes前加上符号"-"
+
+## 虚拟主机
+
 
