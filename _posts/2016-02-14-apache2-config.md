@@ -11,7 +11,7 @@ tags:        [Apache2, Ubuntu]
 
 **注: 不同系统不同版本的apache配置文件管理方式有些许差别(差别主要在于配置文件具体结构，配置命令则是相同的），本文所述基于Apache 2.4.7(Ubuntu)**
 
-## 配置文件结构
+## 1.配置文件结构
 
 主配置文件 /etc/apache2/apache2.conf,其他配置文件在apache2.conf中通过include导入。 
 
@@ -42,7 +42,7 @@ Apache2根据功能将配置划分到多个文件中，这样做的好处是配�
 另外，以sites-enabled文件夹为例，在终端通过命令可以发现sites-enabled中的文件只是一些连接文件，真身都在sites-available中。这么做的好处是，如果你要配置多个站点，只需在site-available文件中对每个站点新建一个站点配置文件，后续站点的启用和关闭只需在sites-enabled文件夹中建立和删除相应的连接文件即可，不用每次都修改配置文件。 
 
 
-## 使用apache2ctl控制服务器
+## 2.使用apache2ctl控制服务器
 
 apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linux发行版中的apache http服务器都有这个文件**。　
 
@@ -58,7 +58,7 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
         status      显示服务器摘要的状态信息
         stop        停止服务器
 
-## apache2.conf中缺省的配置命令
+## 3.apache2.conf中缺省的配置命令
 1. IncludeOptional 与 Include 功能一样，在配置文件中导入其他配置文件,不同之处在于，使用IncludeOptional，当通配符没有任何匹配的文件和文件夹时，IncludeOptional指令会忽略而不是引发一个错误. 
 2. ServerRoot 用来设置服务器所在目录，一般包含conf/、logs/等子目录。其他配置文件的相对路径基于此目录 
 3. ServerAdmin 设置服务器返回客启端的错误信息中包含的管理员邮件地址，便于用户在收到错误信息后能及时与管理员取得联系
@@ -80,6 +80,57 @@ apache2ctl是一个脚本文件，供管理员控制服务器,**不是每个linu
 15. <Directory> 控制服务器的默认安全模型,默认服务器对除/usr/share 和 /var/www 外的文件没有访问权限,其中/usr/share用于Web应用程序,/var/www用作Web服务器的本地文件夹,如果需要允许访问其他文件，需要在此处定义访问权限，或者在相关的虚拟主机设置中添加访问权限 
 16. Options Indexes 如果文件根目录中没有index.html,浏览器会显示文件根目录的目录列表，如果虚拟目录下没有index.html,浏览器也会显示虚拟目录的目录结构，要禁止显示目录结构列表，只需将Option中的Indexes去掉即可,或在Indexes前加上符号"-"
 
-## 虚拟主机
+## 4.虚拟主机
+
+> 虚拟主机指的是在单一机器上运行多个网站。(这些站点运行在同一物理服务器上的事实不会明显的透漏给用户)
+
+网上有人说如果只运行一个网站，那么不用虚拟主机,用全局设置即可。  
+我没有试过，但是个人认为用虚拟主机来统一设置网站更好，这样仅一个网站的情况可以视为一种特例。  
+更容易理解。
+
+即 **要运行几个网站，就设置几个虚拟主机**
+
+
+虚拟主机有两种:
+
+1. 基于IP (一个IP一个站点)
+2. 基于名称 (一个IP多个站点)
+
+配置命令:
+
+    <VirtualHost>
+    ServerName
+    ServerAlias
+    ServerPath
+
+如果要调试虚拟主机配置，使用命令行参数-S，这个命令会显示Apache如何解析配置文件。
+
+**Apache决定请求文件位置的逻辑**
+
+需要用到以下几个参数:
+
+    URL_Path        用户请求的地址 
+    ServerRoot      全局配置变量
+    DocumentRoot    虚拟主机配置变量(即在<VirtualHost>中设置)
+    DirectoryIndex  虚拟主机配置变量
+
+规则:
+
+**一般情况下,`DocumentRoot + URL_Path主机名端口号后面的部分`即构成了请求文件的路径。**
+
+特殊情况:
+
+1. 如果DocumentRoot配置时使用的是相对路径，那该路径是相对于ServerRoot   
+    即: `ServerRoot + DocumentRoot + URL_Path主机名端口号后面的部分`
+
+2. 如果URL_Path中用户请求的是一个文件夹，即URL_Path以`/`结尾，那么需要用到DirectoryIndex指定的文件。  
+    即: `DocumentRoot + URL_Path主机名端口号后面的部分 + DirectoryIndex指定的文件`   
+    Apache会按DirectoryIndex定义的文件顺序依次查找文件，如果都没找到，则根据第3节第16条命令决定是否显示文件目录列表。
+
+**DocumentRoot(相对路径时ServerRoot+DocumentRoot)构成了用户从网上可见的基本文档树**
+
+
+
+## 5.其他
 
 
