@@ -1,13 +1,13 @@
 ---
 layout:      default
-title:       Apache2.4.7(Ubuntu)配置解析
+title:       Apache2.4.7(Ubuntu)配置
 keywords:    Apache2
 description: Apache是当今最流行的服务器软件之一，可以运行在广泛的计算机平台上，本文是我在学习Apache配置的过程中作的一些笔记，以备后查。
 categories:  [Apache2] 
 tags:        [Apache2, Ubuntu] 
 ---
 
-# Apache2.4.7(Ubuntu)配置解析
+# Apache2.4.7(Ubuntu)配置
 
 **注: 不同系统不同版本的apache配置文件管理方式有些许差别(差别主要在于配置文件具体结构，配置命令则是相同的），本文所述基于Apache 2.4.7(Ubuntu)**
 
