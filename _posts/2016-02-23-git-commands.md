@@ -94,17 +94,112 @@ HEAD : 指当前所在分支末梢的最新提交，即最新版本
     # 比较工作区与仓库区的差别
     $ git diff HEAD
 
+    $ 比较当前工作目录树与<SHA>版本
+    # git diff <SHA>
+
+    $ 比较两个版本间的差异
+    # git diff <SHA1> <SHA2>
+
+    # 查看提交日志
+    $ git log 
+
+    # 显示最近n个提交
+    $ git log -n
+
+    # 显示从提交<SHA>到现在的全部提交 
+    $ git log <SHA>
+
+    # 利用时间范围查找提交日志
+    $ git log --since "5 hours"
+    $ git log --before "5 hours"
+
+    # 显示两版本间的提交
+    $ git log <SHA-old> <SHA-new>
+
+    # 显示指定文件什么人什么时间修改过
+    $ git blame <file>
 
 ## 7.分支
 
-    # 获取本地分支
-    $ git branch
-    # 获取远程分支
-    $ git branch -r 
-    # 获取所有分支，包括远程分支
-    $ git branch -a
+分支多用于三个场景:
 
++ 支持不同版本
++ 开发新功能
++ bug修复
 
+常用分支命令:
 
+    # 列出所有本地分支 [远程分支|全部分支]
+    $ git branch [-r | -a]
 
+    # 新建分支,但仍然停留在当前分支
+    git branch <branch-name> 
+
+    # 新建分支，并切换到该分支
+    git checkout -b <branch-name> 
+
+    # 新建分支，指向某个tag
+    git checkout -b <branch-name> <tag-name>
+
+    # 切换到指定分支，并更新工作区
+    git checkout <branch-name>
+
+    # 重命名分支 
+    git branch -m <old-branch> <new-branch>
+
+    # 删除分支(见后注)
+    git branch [-d | -D] <branch-name>
+
+    # 删除远程分支
+    $ git push origin --delete <branch-name>
+    $ git branch -dr <remote/branch>
+
+    # 直接合并
+    # 合并指定分支到当前分支
+    $ git merge <branch-name>
+
+    # 压合全并
+    # 将一个分支若干提交压合成一个，提交到当前分支末梢(压合合并),添加到暂存区未提交
+    $ git merge --squash <branch-name> 
+    
+    # 拣选合并
+    # 拣选另一条分支上某提交，将其合并入当前分支
+    $ git cherry-pick [-n] <commit-SHA>
+
+注:
+
++ 删除分支一般发生在三种场景中。
+
+  + 分支已打标签并已发布(打标签后，Git会保留至此标签的历史轨迹)
+  + 试验分支成功完成工作或中途废弃
+  + 合并回当前分支后
+
+    **只有当要删除的分支已成功合并回当前分支时，用选项-d删除分支的操作才能成功**  
+    **如确定无须合并，则用选项-D**  
+
++ 冲突总是发生在对不同分支上的同一文件的同一文本块以不同的方式修改，并试图合并的时候。
+
+  + 简单的冲突，手工编辑并解决冲突即可，然后保存修改、暂存、提交
+  + 复杂的冲突用mergetool (`git mergetool`可以查看本地merge.tool的值)
+
+## 8.标签
+
+标签(里程碑)记录版本库一个特定点，用来标识难读难记的内部版本号
+
+    # 列出所有标签
+    $ git tag 
+
+    # 新建一个tag在当前commit [指定commit | 指定分支的最后一个commit]
+    $ git tag <tag-name> [<commit> | <branch>]
+
+    # 删除本地tag
+    $ git tag -d <tag-name>
+
+    # 查看tag信息
+    $ git show <tag-name>
+
+## 9. 撤销
+
+    # 重置HEAD至指定状态，即恢复前面的修改
+    $ git reset
 
