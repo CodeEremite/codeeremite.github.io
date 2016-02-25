@@ -1,13 +1,19 @@
 ---
 layout:      default
-title:       Git命令清单 
+title:       Git常用命令速查 
 keywords:    git
-description: git常用命令清单
+description: 使用Git时间不长，命令太多，一下也记不住，这里把学过的一些常用命令整理出来作为速查手册。
 categories:  [git]
 tags:        git
 ---
 
-# Git命令清单
+# Git常用命令速查
+
+使用Git时间不长，命令太多，一下也记不住，这里把学过的一些常用命令整理出来作为速查手册。
+
+本文结构参考了[《阮一峰:常用Git命令清单》][1],具体清单会有一些不同。
+
+[1]: http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
 
 ## 1.Git基本命令
 
@@ -98,7 +104,7 @@ HEAD : 指当前所在分支末梢的最新提交，即最新版本
     # git diff <SHA>
 
     $ 比较两个版本间的差异
-    # git diff <SHA1> <SHA2>
+    # git diff <SHA1>..<SHA2>
 
     # 查看提交日志
     $ git log 
@@ -114,10 +120,19 @@ HEAD : 指当前所在分支末梢的最新提交，即最新版本
     $ git log --before "5 hours"
 
     # 显示两版本间的提交
-    $ git log <SHA-old> <SHA-new>
+    $ git log <SHA-old>..<SHA-new>
 
     # 显示指定文件什么人什么时间修改过
     $ git blame <file>
+
+    # 检测同一文件内移动和复制的代码行
+    $ git blame -M <file>
+
+    # 显示某次提交时，某个文件的内容
+    $ git show <commit>:<file>
+
+    # 显示当前分支的最后几次提交
+    $ git reflog
 
 ## 7.分支
 
@@ -166,6 +181,9 @@ HEAD : 指当前所在分支末梢的最新提交，即最新版本
     # 拣选另一条分支上某提交，将其合并入当前分支
     $ git cherry-pick [-n] <commit-SHA>
 
+    # 变基
+    $ git rebase
+
 注:
 
 + 删除分支一般发生在三种场景中。
@@ -198,8 +216,69 @@ HEAD : 指当前所在分支末梢的最新提交，即最新版本
     # 查看tag信息
     $ git show <tag-name>
 
-## 9. 撤销
+## 9.撤销
 
-    # 重置HEAD至指定状态，即恢复前面的修改
-    $ git reset
+    # 恢复暂存区的指定文件到工作区
+    $ git chechout <file>
+
+    # 恢复某个commit的指定文件到暂存区和工作区
+    $ git checkout <commit> <file>
+
+    # 恢复暂存区的所有文件到工作区
+    $ git checkout .
+
+    # 重置暂存区的指定文件，与上一次commit保持一致
+    $ git reset <file>
+
+    # 重置暂存区与工作区，与上一次commit保持一致
+    $ git reset --hard
+
+    # 重置当前分支的指针为指定的commit，同时重置暂存区，但工作区不变
+    $ git reset <commit>
+
+    # 重置当前分支的HEAD为指定commit,同时重置暂存区和工作区，与commit一致
+    $ git reset --hard <commit>
+
+    # 重置当前HEAD为指定commit，但保持暂存区和工作区不变
+    $ git reset --keep <commit>
+
+    # ???
+    $ git revert
+
+## 10.远程同步
+
+    # 显示所有远程仓库
+    $ git remote -v
+
+    # 显示某个远程仓库的信息
+    $ git remote show [remote]
+
+    # 增加一个新的远程仓库，并命名
+    $ git remote add <localname> <url>
+
+    # 下载远程仓库的所有变动
+    $ git fetch [remote]
+
+    # 取回远程仓库的变化，并与本地分支合并
+    $ git pull [remote] [branch]
+
+    # 上传本地分支到远程仓库
+    $ git push [remote] [branch]
+
+    # 推送所有分支到远程仓库
+    $ git push [remote] --all
+
+## 11.归档
+
+    # 归档，生成一个可供发布的压缩包
+    $ git archive
+
+## 12.改写历史记录
+
+所谓改写历史记录就是修改改动本身，一般应用场景:
+
++ 给历史记录重新排序，使其看起来更合理
++ 将多个提交压合成一个提交
++ 将一个提交分解为多个提交
+
 
