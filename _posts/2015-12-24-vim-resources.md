@@ -3,7 +3,7 @@ layout:      default
 title:       推荐一些Vim学习资源
 keywords:    vim
 description: 这里列出了我在学习Vim的过程中收集的一些非常有用的资源。
-categories:  [vim]
+categories:  [学习资源]
 tags:        [工具, vim]
 ---
 

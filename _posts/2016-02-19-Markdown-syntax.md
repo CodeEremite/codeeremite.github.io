@@ -3,7 +3,7 @@ layout:      default
 title:       MarkDown语法
 keywords:    MarkDown
 description: MarkDown的目标并不是要取代HTML，事实上Markdown只涵盖了一小部分HTML标签。准确地说，HTML是一种发布格式，而Markdown是一种书写格式，主要是为了方便写和编辑。本文概括了Markdown比较常用的语法，以备查用。 
-categories:  [MarkDown]
+categories:  [开发速查]
 tags:        MarkDown
 ---
 

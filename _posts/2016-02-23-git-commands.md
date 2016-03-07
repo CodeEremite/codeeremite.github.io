@@ -3,7 +3,7 @@ layout:      default
 title:       Git常用命令速查 
 keywords:    git
 description: 使用Git时间不长，命令太多，一下也记不住，这里把学过的一些常用命令整理出来作为速查手册。
-categories:  [git]
+categories:  [开发速查]
 tags:        git
 ---
 
