@@ -4,19 +4,24 @@ title: 求知尝味
 ---
 <div class="preview">
     {% for post in paginator.posts %}
-    <div class="article-item">
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <p class="text-date">Written on {{ post.date | date_to_string }}</p>
         <p class="text-muted">{{ post.description }}</p>        
         <p><a href="{{ post.url }}">阅读全文 &raquo;</a></p> 
-    </div>
     {% endfor %}
     {% if paginator.total_pages > 1 %}
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//','/' }}">&larr; Newer</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//','/' }}">Older &rarr;</a>
-        {% endif %}
+</div>
+<div class="paginator clearfix">
+    {% if paginator.previous_page %}
+    <div class="pre-page">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//','/' }}">&larr; NEWER</a>
+    </div>
     {% endif %}
+    {% if paginator.next_page %}
+    <div class="next-page">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//','/' }}">OLDER&rarr;</a>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
 </div>

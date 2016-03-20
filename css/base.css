@@ -132,7 +132,6 @@ nav,footer {
 
 .preview h2 {
     font-size: 1.5em;
-    /*margin-bottom: 1em;*/
     margin-top: 1em;
     
 }
@@ -156,3 +155,31 @@ nav,footer {
     font-size: 0.8em;
     color: #aaa;
 }
+
+.paginator {
+    margin-top: 2em;
+}
+
+.paginator .pre-page { float:left; }
+.paginator .next-page { float:right; }
+
+.paginator a {
+    display:block;
+    padding:1em;
+    border-radius: 1em;
+    
+}
+
+.paginator a:link,
+.paginator a:visited {
+    border: 2px solid #333;
+    color: #333;
+}
+
+.paginator a:focus,
+.paginator a:hover,
+.paginator a:active {
+    color: rgb(0,202,253);
+    border: 2px solid rgb(0,202,253);
+}
+
