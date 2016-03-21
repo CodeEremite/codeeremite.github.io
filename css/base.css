@@ -240,16 +240,19 @@ main a:active {
         margin-right: -1em;
     }
 
-    main h1,
+    main h1 { font-size:1.2em; line-height:2;}
     main h2,
     main h3,
     main h4 {
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 1.5;
     }
 
-    main p {
-       font-size: 0.8em; 
+    main ul,
+    main ol,
+    main li,
+    main p { 
+        font-size: 0.8em;
     }
 }
 
