@@ -248,9 +248,7 @@ main a:active {
         line-height: 1.5;
     }
 
-    main ul,
-    main ol,
-    main li,
+    main li { font-size: 0.8em;}
     main p { 
         font-size: 0.8em;
     }
