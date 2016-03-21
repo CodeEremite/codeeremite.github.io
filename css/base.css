@@ -130,10 +130,67 @@ nav,footer {
     }
 }
 
+main pre {
+    padding:2em 1em;
+    background-color: rgb(0,44,55);
+    color: lime;
+    color: rgb(0,167,150);
+    /*color: rgb(186,134,33);*/
+    overflow-x:auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 48em) { 
+    main pre{margin-left: -1.231em; margin-right: -1.231em; }
+}
+
+main p {
+    line-height: 2;
+    color: #444; 
+}
+
+main ul,
+main ol { list-style-position: inside; color: #444;}
+
+main li { padding-top:0.3em; padding-bottom: 0.3em; }
+
+main blockquote {
+    margin:1em 0;
+    padding-left:1em;
+    border-left: 0.5em solid rgb(0,202,253);
+    font-size: 1.2em;
+}
+
+blockquote p {
+    color: #333;
+    font-weight: 900;
+}
+
+strong { color: black; font-weight:800;}
+
+main h1,
+main h2,
+main h3 {
+    color: #333;
+    line-height: 2;
+}
+
+main h1 { text-align: center;}
+main a:link,
+main a:visited{
+    color: #333;
+}
+
+main a:focus,
+main a:hover,
+main a:active {
+    color: rgb(0,202,253);
+}
+
 .preview h2 {
     font-size: 1.5em;
     margin-top: 1em;
-    
 }
 
 .preview a:link,
