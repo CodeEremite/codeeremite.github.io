@@ -142,7 +142,7 @@ main pre {
 }
 
 @media screen and (max-width: 48em) { 
-    main pre{margin-left: -1.231em; margin-right: -1.231em; }
+    /*main pre{margin-left: -1.231em; margin-right: -1.231em; }*/
 }
 
 main p {
