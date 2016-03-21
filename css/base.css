@@ -113,9 +113,7 @@ nav,footer {
 }
 
 @media screen and (min-width: 48em) {
-    .container {
-        width: 46.875em;
-    }
+    /*.container { width: 46.875em; }*/
 }
 
 @media screen and (min-width: 62em) {
