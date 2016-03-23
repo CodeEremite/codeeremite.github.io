@@ -142,7 +142,7 @@ strong { font-size:inherit; color: black; font-weight:800;}
 main ul,
 main ol { 
     list-style-position: inside;
-    color: #555;
+    color: #666;
     margin: 1em, 0;
     padding-left: 1em;
 }
@@ -253,7 +253,7 @@ code.highlighter-rouge{
         margin-right: -1em;
     }
 
-    main h1 { font-size:1.4em; line-height:2;}
+    main h1 { font-size:1.3em; line-height:2;}
     main h2,
     main h3,
     main h4 {

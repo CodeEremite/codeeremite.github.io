@@ -1,6 +1,6 @@
 ---
 layout:      default
-title:       在ANSYS中提取模型刚度阵、质量阵
+title:       在ANSYS中提取模型矩阵信息
 keywords:    [ANSYS,刚度阵,质量阵]
 description: 在ANSYS中使用APDL可以很方便的从模型数据文件(.full)或超单元文件(.sub)中提取模型的刚度阵、质量阵和阻尼阵。本文总结了使用APDL提取矩阵信息的方法，并对提取到的矩阵数据文件的格式(Harwell-Boeing format)进行了说明。
 categories:  [CAE]
