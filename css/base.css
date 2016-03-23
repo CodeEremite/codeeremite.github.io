@@ -164,13 +164,13 @@ main h3 {
 main h1 { text-align: center;}
 main a:link,
 main a:visited{
-    color: #333;
+    color: rgb(0,202,253);
 }
 
 main a:focus,
 main a:hover,
 main a:active {
-    color: rgb(0,202,253);
+    color: #333;
 }
 
 code.highlighter-rouge{
